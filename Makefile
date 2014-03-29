@@ -1,5 +1,5 @@
 ## please modify following line for naming the end products (PDFs, ZIPs, ...)
-PROJECTNAME = "Projectname"
+PROJECTNAME = "PROJECTNAME"
 
 ## -----------------------------------------
 ##       DO NOT EDIT BELOW THIS LINE
@@ -7,7 +7,7 @@ PROJECTNAME = "Projectname"
 
 ## Makefile von Karl Voit (Karl@Voit.net)
 
-## some Makefile-hints taken from: 
+## some Makefile-hints taken from:
 ## http://www.ctan.org/tex-archive/help/uk-tex-faq/Makefile
 
 
@@ -64,7 +64,7 @@ view: pdf
 
 #help	clean	clean up temporary files
 .PHONY: clean
-clean: 
+clean:
 	-rm -r *.bcf *.run.xml _*_.* *~ *.aux *-blx.bib *.bbl ${MAINDOCUMENTBASENAME}.dvi *.ps *.blg *.idx *.ilg *.ind *.toc *.log *.log *.brf *.out *.lof *.lot *.gxg *.glx *.gxs *.glo *.gls *.tdo -f
 
 #help	purge	cleaner than clean ;-)
