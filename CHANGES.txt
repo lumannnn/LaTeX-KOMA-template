@@ -1,0 +1,13 @@
+=======
+Changes
+=======
+
+04.04.2014
+==========
+
+ - Initial setup for the FHV template.
+
+28.03.2014
+==========
+
+ - Initial fork from https://github.com/novoid/LaTeX-KOMA-template
