@@ -14,7 +14,7 @@
 %% ========================================================================
 %% (idea of using newcommands for basic documentclass settings from: Thomas Schlager)
 
-\newcommand{\mypapersize}{A4}
+\newcommand{\mypapersize}{a4paper}
 %% e.g., "A4", "letter", "legal", "executive", ...
 %% The size of the paper of the resulting PDF file.
 
@@ -241,16 +241,7 @@
 
 \mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
 
-
-\input{content/example-short-chapter}   %% remove this line to get rid of the example chapter
-\input{content/example-style-chapter}   %% remove this line to get rid of the style chapter
-
-%% include tex file chapters:
-% \include{content/introduction}        %% this is a suggestion: you have to create this file on demand
-% \include{content/problem}             %% this is a suggestion: you have to create this file on demand
-% \include{content/solution}            %% this is a suggestion: you have to create this file on demand
-% \include{content/evaluation}          %% this is a suggestion: you have to create this file on demand
-% \include{content/outlook}             %% this is a suggestion: you have to create this file on demand
+\input{content/_content}
 
 \appendix                       %% closes main document, appendix follows until end; only available in book-classes
 \addpart*{Appendix}             %% adding Appendix to tableofcontents
