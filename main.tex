@@ -6,6 +6,7 @@
 %% created by
 %%
 %%      Karl Voit
+%%      modified by Lukas Ender
 %%
 
 %% ========================================================================
@@ -41,17 +42,17 @@
 %% example "5mm". Refer to KOMA script documentation for a detailed
 %% explanation what a binding correction is and how to measure it.
 
-\newcommand{\myfontsize}{12pt}   
+\newcommand{\myfontsize}{11pt}
 %% e.g., 10pt, 11pt, 12pt
 %% The font size of the main text in pt (points).
 
-\newcommand{\mylinespread}{1.0} 
+\newcommand{\mylinespread}{1.2}
 %% e.g., 1.0, 1.5, 2.0
 %% Line spacing in %/100. For example 1.5 means 150% of the usual line
 %% spacing. Please use with caution: 100% ("1.0") is fine because the
 %% font was designed for it.
 
-\newcommand{\mylanguage}{ngerman,american}
+\newcommand{\mylanguage}{ngerman,english}
 %% "english,ngerman", "ngerman,english", ...
 %% NOTE: The *last* language is the active one!
 %% See babel documentation for further details.
@@ -77,7 +78,10 @@
 \newcommand{\mybiblatexfile}{references-biblatex.bib}
 %% Name of the biblatex file that holds the references.
 
-\newcommand{\mydispositioncolor}{30,103,182}
+\newcommand{\myheadercolor}{75,75,75}
+\newcommand{\myfootercolor}{75,75,75}
+\newcommand{\mydispositioncolor}{100,100,100}
+\newcommand{\mycaptioncolor}{100,100,100}
 %% e.g., "30,103,182" (blue/turquois), "0,0,0" (black), ...
 %% Color of the headings and so forth in RGB (red,green,blue) values.
 %% NOTE: if you are using "0,0,0" for black, printers might still
@@ -91,7 +95,7 @@
 \newcommand{\mycolorlinks}{true}  %% "true" or "false"
 %% Enables or disables colored links (hyperref package).
 
-\newcommand{\mytitlepage}{template/title_Thesis_TU_Graz}
+\newcommand{\mytitlepage}{template/title_thesis_FH_Vorarlberg}
 %% Your own or one of following pre-defined title pages:
 %% "template/title_plain_maketitle": simple maketitle page
 %% "template/title_Diplomarbeit_KF_Uni_Graz.tex": fancy (german) title page for KF Uni Graz
@@ -124,30 +128,30 @@
 %% ========================================================================
 
 %% general metadata:
-\newcommand{\myauthor}{AUTHOR}  %% also used for PDF metadata (hyperref)
-\newcommand{\mytitle}{TITLE}  %% also used for PDF metadata (hyperref)
+\newcommand{\myauthor}{Lukas Ender}  %% also used for PDF metadata (hyperref)
+\newcommand{\mytitle}{Title of the master thesis}  %% also used for PDF metadata (hyperref)
 \newcommand{\mysubject}{SUBJECT}  %% also used for PDF metadata (hyperref)
-\newcommand{\mykeywords}{KEYWORDS}  %% also used for PDF metadata (hyperref)
+\newcommand{\mykeywords}{CRATE Crate Data Crate Technology distributed database system CAP ACID BASE FHV FH Vorarlberg}  %% also used for PDF metadata (hyperref)
 
 %% this information is used only for generating the title page:
-\newcommand{\myworktitle}{Master's Thesis}  %% official type of work like ``Master theses''
-\newcommand{\mygrade}{Master of Science} %% title you are getting with this work like ``Master of ...''
-\newcommand{\mystudy}{Telematik} %% your study like ``Arts''
-\newcommand{\myuniversity}{Graz University of Technology} %% your university/school
-\newcommand{\myinstitute}{Institute for Softwaretechnology} %% affiliation
-\newcommand{\myinstitutehead}{Univ.-Prof.\,Dipl-Ing.\,Dr.techn.~Some One} %% head of institute
-\newcommand{\mysupervisor}{Dr.~Some Body} %% your supervisor
-\newcommand{\myevaluator}{Prof.~Some Genius} %% your evaluator
-\newcommand{\myhomestreet}{Street~42} %% your home street (with house number)
-\newcommand{\myhometown}{Graz} %% your home town
-\newcommand{\myhomepostalnumber}{8010} %% your postal number of home town
-\newcommand{\mysubmissionmonth}{November} %% month you are handing in
-\newcommand{\mysubmissionyear}{2013} %% year you are handing in
-\newcommand{\mysubmissiontown}{\myhometown} %% town of handing in (or \myhometown)
+\newcommand{\myworktitle}{subtitle of the master thesis}  %% official type of work like ``Master theses''
+\newcommand{\mygrade}{Master of Science in Engineering (MSc)} %% title you are getting with this work like ``Master of ...''
+\newcommand{\mystudy}{Informatics} %% your study like ``Arts''
+\newcommand{\myuniversity}{FH Vorarlberg University of Applied Sciences} %% your university/school
+\newcommand{\myinstitute}{Institute for Informatics} %% affiliation
+\newcommand{\myinstitutehead}{institute head} %% head of institute
+\newcommand{\mysupervisor}{supervisor} %% your supervisor
+\newcommand{\myevaluator}{evaluator} %% your evaluator
+\newcommand{\myhomestreet}{home street} %% your home street (with house number)
+\newcommand{\myhometown}{home town} %% your home town
+\newcommand{\myhomepostalnumber}{1234} %% your postal number of home town
+\newcommand{\mysubmissionmonth}{August} %% month you are handing in
+\newcommand{\mysubmissionyear}{2014} %% year you are handing in
+\newcommand{\mysubmissiontown}{Dornbirn} %% town of handing in (or \myhometown)
 
 %% additional information for generic_documentation title page
 \newcommand{\myid}{1234567} %% Matrikelnummer
-\newcommand{\mylecture}{LECTURE} %% 
+\newcommand{\mylecture}{LECTURE} %%
 
 
 %% ========================================================================
@@ -182,7 +186,7 @@
 \newcommand{\myLaT}{\LaTeX{}@TUG\xspace} %% LaTeX@TUG text "logo"
 
 \hyphenation{ex-am-ple hy-phen-ate}  %% in order to use German umlauts
-%% here (Ver-\"of-fent-li-chung), you have to check for 
+%% here (Ver-\"of-fent-li-chung), you have to check for
 %% activated \usepackage[T1]{fontenc} in the preamble
 
 %% override default language of babel: (be sure to know, what you're
@@ -218,19 +222,16 @@
 \input{\mytitlepage}            %% include title page
 
 
-\input{template/declaration_TU_Graz}  %% Statutory Declaration
-% \input{thanks}                %% this is a suggestion: you have to create this file on demand
-% \input{foreword}              %% this is a suggestion: you have to create this file on demand
+\input{template/declaration_FHV}    %% Statutory Declaration
+% \input{thanks}                    %% this is a suggestion: you have to create this file on demand
+% \input{foreword}                  %% this is a suggestion: you have to create this file on demand
 
 
 %% include the abstract without chapter number but include it on table of contents:
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Abstract}
 \include{abstract}              %% Abstract
-
-
 \tableofcontents                %% this produces the table of contents - you might have guessed :-)
-
 \listoffigures
 
 %% if myaddlistoftodos is set to "true", the current list of open todos is added:
@@ -241,15 +242,15 @@
 \mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
 
 
-\input{example-short-chapter}   %% remove this line to get rid of the example chapter
-\input{example-style-chapter}   %% remove this line to get rid of the style chapter
+\input{content/example-short-chapter}   %% remove this line to get rid of the example chapter
+\input{content/example-style-chapter}   %% remove this line to get rid of the style chapter
 
 %% include tex file chapters:
-% \include{introduction}        %% this is a suggestion: you have to create this file on demand
-% \include{problem}             %% this is a suggestion: you have to create this file on demand
-% \include{solution}            %% this is a suggestion: you have to create this file on demand
-% \include{evaluation}          %% this is a suggestion: you have to create this file on demand
-% \include{outlook}             %% this is a suggestion: you have to create this file on demand
+% \include{content/introduction}        %% this is a suggestion: you have to create this file on demand
+% \include{content/problem}             %% this is a suggestion: you have to create this file on demand
+% \include{content/solution}            %% this is a suggestion: you have to create this file on demand
+% \include{content/evaluation}          %% this is a suggestion: you have to create this file on demand
+% \include{content/outlook}             %% this is a suggestion: you have to create this file on demand
 
 \appendix                       %% closes main document, appendix follows until end; only available in book-classes
 \addpart*{Appendix}             %% adding Appendix to tableofcontents

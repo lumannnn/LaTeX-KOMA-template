@@ -284,7 +284,7 @@
 %doc% pdflatex main.tex
 %doc% pdflatex main.tex
 %doc% \end{verbatim}
-%doc% 
+%doc%
 %doc% Users of TeXLive with Microsoft Windows might want to try the
 %doc% following script\footnote{Thanks to Florian Brucker for provinding
 %doc%   this script.} which could be stored as, e.g., \texttt{compile.bat}:
@@ -297,7 +297,7 @@
 %doc% pdflatex.exe  "main.tex"
 %doc% pdflatex.exe -synctex=-1 -interaction=nonstopmode "main.tex"
 %doc% \end{verbatim}
-%doc% 
+%doc%
 
 
 %doc%
@@ -424,7 +424,18 @@ BCOR=\myBCOR,        %% binding correction (depends on how you bind
 %doc% script documentation how to use this package.
 %doc%
 \usepackage{scrpage2} %%  advanced page style using KOMA
+%% set the default header and footers using scrheadings.
+%%
+\pagestyle{scrheadings}
 
+%doc%
+%doc% \subsection{Source code}
+%doc% \label{sec:source-code}
+%doc%
+%doc% This template uses the package \emph{listings} to format source code.
+%doc% Source code can then be formatted as described in the \href{http://tug.ctan.org/macros/latex/contrib/listings/listings.pdf}{\texttt{documentation}}.
+%doc%
+\usepackage{listings} %% package to display source code snippets
 
 %doc%
 %doc% \subsection{References}\myimportant
@@ -610,7 +621,9 @@ hyperref=true, %% using hyperref-package references
 %doc% please change corresponding value in \texttt{main.tex} to \{0,0,0\}.
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{DispositionColor}{RGB}{\mydispositioncolor} %% used for links and so forth in screen-version
-
+\definecolor{HeaderColor}{RGB}{\myheadercolor}
+\definecolor{FooterColor}{RGB}{\myfootercolor}
+\definecolor{CaptionColor}{RGB}{\mycaptioncolor}
 %doc% \item[\texttt{\href{http://www.ctan.org/pkg/ulem}{%%
 %doc% ulem%%
 %doc% }}]

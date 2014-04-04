@@ -5,6 +5,7 @@ template/auto/*
 *.blg
 *.log
 *.toc
+*.out
 Template-Documentation.tex
 main.pdf
 main-blx.bib
@@ -18,3 +19,5 @@ main.lof
 main.tdo
 *.synctex.gz
 template/blind*
+*.swp
+.DS_Store
